@@ -1,0 +1,39 @@
+{
+  "family": "altsports-task-$ENVIRONMENT",
+  "executionRoleArn": "$AWS_TASK_EXECUTION_ROLE",
+  "containerDefinitions": [
+    {
+      "name": "altsports-api-task",
+      "image": "$CONTAINER_REGISTRY_URL:$CONTAINER_REGISTRY_TAG-$SEM_VERSION",
+      "memoryReservation": 200,
+      "portMappings": [
+        {
+          "hostPort": 0,
+          "protocol": "tcp",
+          "containerPort": $PORT
+        }
+      ],
+      "essential": true,
+      "secrets": [{
+        "name": "SERVICE_TOKEN",
+        "valueFrom": "$SERVICE_TOKEN_VALUE"
+      }],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "$ECS_LOG_GROUP_NAME",
+          "awslogs-region": "$ECS_LOG_GROUP_REGION",
+          "awslogs-stream-prefix": "node"
+        }
+      },
+      "mountPoints": [],
+      "volumesFrom": []
+    }
+  ],
+  "volumes": [],
+  "placementConstraints": [],
+  "requiresCompatibilities": [
+    "EC2"
+  ],
+  "ipcMode": "none"
+}

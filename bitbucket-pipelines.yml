@@ -1,0 +1,182 @@
+image: node:18-alpine3.14
+
+definitions:
+  services:
+    docker:
+      memory: 4096
+
+options:
+  max-time: 15
+
+pipelines:
+  pull-requests:
+    "**":
+      - step:
+          name: Build & Test
+          caches:
+            - node
+          script:
+            - npm ci
+      - parallel:
+          - step:
+              name: Prettier validate files
+              caches:
+                - node
+              script:
+                - npm run prettier:check
+          - step:
+              name: Lint Files
+              caches:
+                - node
+              script:
+                - npm run lint
+          - step:
+              name: Build
+              caches:
+                - node
+              script:
+                - npm run build
+
+  branches:
+    develop:
+      - step:
+          name: Build & Deploy
+          size: 2x
+          deployment: develop
+          script:
+            - export DOCKER_BUILDKIT=1
+            - export SEM_VERSION=$(echo $BITBUCKET_COMMIT | head -c 7)
+            - /bin/sh script_merge_setup.sh
+
+            - pipe: atlassian/aws-ecr-push-image:2.0.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_REGION
+                IMAGE_NAME: $CONTAINER_REGISTRY_NAME
+                TAGS: "$CONTAINER_REGISTRY_TAG-$SEM_VERSION"
+
+            - pipe: atlassian/aws-ecs-deploy:1.7.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_REGION
+                CLUSTER_NAME: $AWS_ECS_CLUSTER_NAME
+                SERVICE_NAME: $AWS_ECS_SERVICE_NAME
+                TASK_DEFINITION: "task-definition.json"
+            - pipe: atlassian/slack-notify:2.0.0
+              variables:
+                WEBHOOK_URL: $SLACK_DEPLOYMENT_HOOK
+                MESSAGE: "API Deployment to $BITBUCKET_DEPLOYMENT_ENVIRONMENT for $BITBUCKET_REPO_FULL_NAME with version $SEM_VERSION is complete."
+
+          services:
+            - docker
+          caches:
+            - docker
+      - step:
+          name: Build & Deploy
+          size: 2x
+          deployment: staging
+          trigger: manual
+          script:
+            - export DOCKER_BUILDKIT=1
+            - export SEM_VERSION=$(echo $BITBUCKET_COMMIT | head -c 7)
+            - /bin/sh script_merge_setup.sh
+
+            - pipe: atlassian/aws-ecr-push-image:2.0.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_REGION
+                IMAGE_NAME: $CONTAINER_REGISTRY_NAME
+                TAGS: "$CONTAINER_REGISTRY_TAG-$SEM_VERSION"
+
+            - pipe: atlassian/aws-ecs-deploy:1.7.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_REGION
+                CLUSTER_NAME: $AWS_ECS_CLUSTER_NAME
+                SERVICE_NAME: $AWS_ECS_SERVICE_NAME
+                TASK_DEFINITION: "task-definition.json"
+            - pipe: atlassian/slack-notify:2.0.0
+              variables:
+                WEBHOOK_URL: $SLACK_DEPLOYMENT_HOOK
+                MESSAGE: "API Deployment to $BITBUCKET_DEPLOYMENT_ENVIRONMENT for $BITBUCKET_REPO_FULL_NAME with version $SEM_VERSION is complete."
+
+          services:
+            - docker
+          caches:
+            - docker
+      - step:
+          name: Build & Deploy
+          size: 2x
+          deployment: release
+          trigger: manual
+          script:
+            - export DOCKER_BUILDKIT=1
+            - export SEM_VERSION=$(echo $BITBUCKET_COMMIT | head -c 7)
+            - /bin/sh script_merge_setup.sh
+
+            - pipe: atlassian/aws-ecr-push-image:2.0.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_REGION
+                IMAGE_NAME: $CONTAINER_REGISTRY_NAME
+                TAGS: "$CONTAINER_REGISTRY_TAG-$SEM_VERSION"
+
+            - pipe: atlassian/aws-ecs-deploy:1.7.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_REGION
+                CLUSTER_NAME: $AWS_ECS_CLUSTER_NAME
+                SERVICE_NAME: $AWS_ECS_SERVICE_NAME
+                TASK_DEFINITION: "task-definition.json"
+            - pipe: atlassian/slack-notify:2.0.0
+              variables:
+                WEBHOOK_URL: $SLACK_DEPLOYMENT_HOOK
+                MESSAGE: "API Deployment to $BITBUCKET_DEPLOYMENT_ENVIRONMENT for $BITBUCKET_REPO_FULL_NAME with version $SEM_VERSION is complete."
+
+          services:
+            - docker
+          caches:
+            - docker
+
+  custom:
+    release-build:
+      - step:
+          name: Build & Deploy Release
+          size: 2x
+          deployment: release
+          script:
+            - export DOCKER_BUILDKIT=1
+            - export SEM_VERSION=$(echo $BITBUCKET_COMMIT | head -c 7)
+            - /bin/sh script_merge_setup.sh
+
+            - pipe: atlassian/aws-ecr-push-image:1.6.2
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_REGION
+                IMAGE_NAME: $CONTAINER_REGISTRY_NAME
+                TAGS: "$CONTAINER_REGISTRY_TAG-$SEM_VERSION"
+
+            - pipe: atlassian/aws-ecs-deploy:1.6.2
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_REGION
+                CLUSTER_NAME: $AWS_ECS_CLUSTER_NAME
+                SERVICE_NAME: $AWS_ECS_SERVICE_NAME
+                TASK_DEFINITION: "task-definition.json"
+            - pipe: atlassian/slack-notify:2.0.0
+              variables:
+                WEBHOOK_URL: $SLACK_DEPLOYMENT_HOOK
+                MESSAGE: "API Deployment to $BITBUCKET_DEPLOYMENT_ENVIRONMENT for $BITBUCKET_REPO_FULL_NAME with version $SEM_VERSION is complete."
+
+          services:
+            - docker
+          caches:
+            - docker

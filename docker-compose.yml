@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  api:
+    environment:
+      - SERVICE_TOKEN=dp.st.dev.UX1vfqhxCCjmjPiwHGVbizAVrOBqmhRAQmcRRJpyN9T
+    image: altsports-api-dev:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: altsports-api-dev
+    expose:
+      - "9200"
+    ports:
+      - "9200:9200"
+    restart: "unless-stopped"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules

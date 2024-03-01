@@ -1,0 +1,53 @@
+{
+  "editor.autoIndent": "brackets",
+  "editor.codeActionsOnSave": ["source.addMissingImports", "source.organizeImports"],
+  "editor.codeLens": false,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 3,
+  "editor.fontSize": 16,
+  "editor.fontLigatures": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.letterSpacing": 0.5,
+  "editor.lineHeight": 25,
+  "editor.lineNumbers": "on",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.minimap.enabled": true,
+  "editor.tabSize": 2,
+  "editor.tabCompletion": "on",
+  "editor.wordWrap": "on",
+  "editor.renderWhitespace": "none",
+  "editor.suggestSelection": "first",
+  "files.trimTrailingWhitespace": true,
+  "files.defaultLanguage": "",
+  "git.enableSmartCommit": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "diffEditor.renderSideBySide": true,
+  "editor.formatOnSave": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "editor.linkedEditing": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.inlineSuggest.showToolbar": "always",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}

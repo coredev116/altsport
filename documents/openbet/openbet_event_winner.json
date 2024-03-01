@@ -1,0 +1,677 @@
+{
+  "header": {
+    "timestamp": "2024-02-01T14:50:09.526Z",
+    "trackingId": "6dab07f2-b83d-446c-bfb4-e0b238594707"
+  },
+  "fixtureId": "6dab07f2-b83d-446c-bfb4-e0b238594707",
+  "fixture": {
+    "sport": {
+      "id": "surfing",
+      "name": "Surfing"
+    },
+    "competition": {
+      "id": "TEST_WORLD_SURF_LEAGUE",
+      "name": "Test - World Surf League",
+      "tags": {
+        "COUNTRY": "WORLD"
+      }
+    },
+    "participants": [
+      {
+        "id": "6dab07f2-b83d-446c-bfb4-e0b238594707-P1",
+        "name": "Mr. Tonya Morar",
+        "side": "NONE",
+        "type": "INDIVIDUAL"
+      },
+      {
+        "id": "6dab07f2-b83d-446c-bfb4-e0b238594707-P2",
+        "name": "Herman Zboncak",
+        "side": "NONE",
+        "type": "INDIVIDUAL"
+      },
+      {
+        "id": "6dab07f2-b83d-446c-bfb4-e0b238594707-P3",
+        "name": "Dr. Ebony Wyman",
+        "side": "NONE",
+        "type": "INDIVIDUAL"
+      },
+      {
+        "id": "6dab07f2-b83d-446c-bfb4-e0b238594707-P4",
+        "name": "Willard Heidenreich",
+        "side": "NONE",
+        "type": "INDIVIDUAL"
+      },
+      {
+        "id": "6dab07f2-b83d-446c-bfb4-e0b238594707-P5",
+        "name": "Gustavo Kassulke",
+        "side": "NONE",
+        "type": "INDIVIDUAL"
+      },
+      {
+        "id": "6dab07f2-b83d-446c-bfb4-e0b238594707-P6",
+        "name": "Christine Schaefer",
+        "side": "NONE",
+        "type": "INDIVIDUAL"
+      },
+      {
+        "id": "6dab07f2-b83d-446c-bfb4-e0b238594707-P7",
+        "name": "Woodrow Morar",
+        "side": "NONE",
+        "type": "INDIVIDUAL"
+      },
+      {
+        "id": "6dab07f2-b83d-446c-bfb4-e0b238594707-P8",
+        "name": "Brandy Cummings",
+        "number": "8",
+        "side": "NONE",
+        "type": "INDIVIDUAL"
+      },
+      {
+        "id": "6dab07f2-b83d-446c-bfb4-e0b238594707-P9",
+        "name": "Russell Sauer",
+        "number": "9",
+        "side": "NONE",
+        "type": "INDIVIDUAL"
+      }
+    ],
+    "type": "RACE",
+    "id": "6dab07f2-b83d-446c-bfb4-e0b238594707",
+    "name": "Lexus Pipe Pro presented by YETI",
+    "startTime": "2024-02-01T14:50:09.526Z",
+    "matchState": "PRE_MATCH",
+    "offeredInRunning": false
+  },
+  "markets": [
+    {
+      "cfsMarketType": {
+        "specifiers": {
+          "TYPE": "WINNER",
+          "SHAPE": "PARTICIPANTS",
+          "PERIOD": "FINAL_HEAT",
+          "FACT": "SCORE"
+        }
+      },
+      "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:F",
+      "name": "Event Winner",
+      "offeredInRunning": false,
+      "selections": [
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:F:P1",
+          "name": "Mr. Tonya Morar",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P1"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "2.11"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:F:P2",
+          "name": "Herman Zboncak",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P2"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "2.47"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:F:P3",
+          "name": "Dr. Ebony Wyman",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P3"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "2.58"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:F:P4",
+          "name": "Willard Heidenreich",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P4"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "3.06"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:F:P5",
+          "name": "Gustavo Kassulke",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P5"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "1.93"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:F:P6",
+          "name": "Christine Schaefer",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P6"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "1.92"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:F:P7",
+          "name": "Woodrow Morar",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P7"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "3.74"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:F:P8",
+          "name": "Brandy Cummings",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P8"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "2.01"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:F:P9",
+          "name": "Russell Sauer",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P9"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "1.81"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        }
+      ],
+      "status": "OPEN",
+      "typeId": "FinalHeatOutright"
+    },
+    {
+      "cfsMarketType": {
+        "specifiers": {
+          "TYPE": "WINNER",
+          "SHAPE": "PARTICIPANTS",
+          "PERIOD": "SEMI_FINAL_HEATS",
+          "FACT": "SCORE"
+        }
+      },
+      "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:SF",
+      "name": "To Make the Event Final",
+      "offeredInRunning": false,
+      "selections": [
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:SF:P1",
+          "name": "Mr. Tonya Morar",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P1"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "2.11"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:SF:P2",
+          "name": "Herman Zboncak",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P2"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "2.47"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:SF:P3",
+          "name": "Dr. Ebony Wyman",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P3"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "2.58"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:SF:P4",
+          "name": "Willard Heidenreich",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P4"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "3.06"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:SF:P5",
+          "name": "Gustavo Kassulke",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P5"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "1.93"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:SF:P6",
+          "name": "Christine Schaefer",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P6"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "1.92"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:SF:P7",
+          "name": "Woodrow Morar",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P7"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "3.74"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:SF:P8",
+          "name": "Brandy Cummings",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P8"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "2.01"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:SF:P9",
+          "name": "Russell Sauer",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P9"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "1.81"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        }
+      ],
+      "status": "OPEN",
+      "typeId": "SemiFinalHeatOutright"
+    },
+    {
+      "cfsMarketType": {
+        "specifiers": {
+          "TYPE": "WINNER",
+          "SHAPE": "PARTICIPANTS",
+          "PERIOD": "QUARTER_FINAL_HEATS",
+          "FACT": "SCORE"
+        }
+      },
+      "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:QF",
+      "name": "To Make the Event Semi-Finals",
+      "offeredInRunning": false,
+      "selections": [
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:QF:P1",
+          "name": "Mr. Tonya Morar",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P1"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "2.11"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:QF:P2",
+          "name": "Herman Zboncak",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P2"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "2.47"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:QF:P3",
+          "name": "Dr. Ebony Wyman",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P3"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "2.58"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:QF:P4",
+          "name": "Willard Heidenreich",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P4"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "3.06"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:QF:P5",
+          "name": "Gustavo Kassulke",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P5"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "1.93"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:QF:P6",
+          "name": "Christine Schaefer",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P6"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "1.92"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:QF:P7",
+          "name": "Woodrow Morar",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P7"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "3.74"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:QF:P8",
+          "name": "Brandy Cummings",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P8"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "2.01"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        },
+        {
+          "cfsSelectionType": {
+            "specifiers": {
+              "TYPE": "PARTICIPANT"
+            }
+          },
+          "id": "6dab07f2-b83d-446c-bfb4-e0b238594707:QF:P9",
+          "name": "Russell Sauer",
+          "parameters": {
+            "PLAYER": "6dab07f2-b83d-446c-bfb4-e0b238594707-P9"
+          },
+          "result": "UNSET",
+          "tradingData": {
+            "odds": {
+              "decimal": "1.81"
+            },
+            "status": "OPEN"
+          },
+          "typeId": "PLAYER"
+        }
+      ],
+      "status": "OPEN",
+      "typeId": "QuarterFinalHeatOutright"
+    }
+  ]
+}
